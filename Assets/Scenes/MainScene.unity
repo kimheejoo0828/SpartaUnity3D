@@ -2849,7 +2849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8293033343687796818, guid: 7b64f4433cf933f49a607faf6f14d647, type: 3}
       propertyPath: m_Name
-      value: Item_apple
+      value: Item_Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

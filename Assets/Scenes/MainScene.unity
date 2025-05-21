@@ -548,7 +548,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 369460742}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnMoveInput
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -564,7 +564,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 369460742}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnLookInput
+        m_MethodName: OnLook
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -580,7 +580,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 369460742}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJumpInput
+        m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpPower: 5
+  jumpPower: 8
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 55
@@ -1253,7 +1253,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: -0.27, y: 0.53, z: 1}
+  m_Size: {x: 0.22, y: 0.53, z: 1}
   m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!1 &1044165150
 GameObject:
@@ -1268,7 +1268,7 @@ GameObject:
   - component: {fileID: 1044165154}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,11 +1606,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19bb78a17ce79e84a99906155435a976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 2.172
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19bb78a17ce79e84a99906155435a976, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.82
+      value: 2.844
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 19bb78a17ce79e84a99906155435a976, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2111,7 +2111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f258ce55574c9b645ade13d144c8a6dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f258ce55574c9b645ade13d144c8a6dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2547,6 +2547,7 @@ GameObject:
   - component: {fileID: 543450653414542770}
   - component: {fileID: 3469287837264069143}
   - component: {fileID: 1711813855348635357}
+  - component: {fileID: 3469287837264069144}
   m_Layer: 0
   m_Name: top
   m_TagString: Ground
@@ -2807,6 +2808,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149474006792}
   m_Mesh: {fileID: 282665186597767424, guid: 6cf70f2d7a90ab244af67c6e1c52b9df, type: 3}
+--- !u!65 &3469287837264069144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149474006792}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: -1.02, y: 0.19, z: 1.04}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &3677047888757736126
 MeshFilter:
   m_ObjectHideFlags: 0

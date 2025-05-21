@@ -12,7 +12,6 @@ public class PlayerCondition : MonoBehaviour
     Condition stamina { get { return uicondition.stamina;} }
 
     public float noHungerHealthDecay;
-    public event Action onTakeDamage;
 
     private void Update()
     {

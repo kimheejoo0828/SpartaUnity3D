@@ -5,7 +5,8 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Consumable
+    Consumable,
+    Equipable
 }
 
 public enum ConsumableType
@@ -34,7 +35,7 @@ public class ItemData : ScriptableObject
 
     [Header("stacking")]
     public bool canStack;
-    public int maxstackAmount;
+    public int maxStackAmount;
 
     [Header("Consumable")]
     public ItemDataConsumable[] consumables;

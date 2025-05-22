@@ -20,11 +20,10 @@ public class PlayerController : MonoBehaviour
     public float maxXLook;
     private float camCurXRot;
     public float lookSensitivity;
+    private Vector2 mouseDelta;
     public bool canLook = true;
 
     public Action inventory;
-    private Vector2 mouseDelta;
-
     private Rigidbody _rigidbody;
 
     private void Awake()
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
+    void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }

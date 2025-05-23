@@ -134,16 +134,19 @@ public class PlayerController : MonoBehaviour
         canLook = !toggle;
     }
 
-    public void BoostSpeed(float amount, float duration)
+    public void BoostSpeed(float extraSpeed, float duration)
     {
         if (speedBuffCoroutine != null)
+        {
             StopCoroutine(speedBuffCoroutine);
-        speedBuffCoroutine = StartCoroutine(SpeedBuffRoutine(amount, duration));
+        }
+
+        speedBuffCoroutine = StartCoroutine(SpeedBoostCoroutine(extraSpeed, duration));
     }
 
-    IEnumerator SpeedBuffRoutine(float amount, float duration)
+    IEnumerator SpeedBoostCoroutine(float extraSpeed, float duration)
     {
-        moveSpeed = baseSpeed + amount;
+        moveSpeed = baseSpeed + extraSpeed;
         yield return new WaitForSeconds(duration);
         moveSpeed = baseSpeed;
     }

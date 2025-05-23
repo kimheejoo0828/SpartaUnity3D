@@ -30,7 +30,7 @@ public class ItemData : ScriptableObject
     public string displayName;
     public string description;
     public ItemType type;
-    public Sprite Icon;
+    public Sprite icon;
     public GameObject dropPrefab;
 
     [Header("stacking")]

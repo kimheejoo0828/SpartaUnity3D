@@ -373,6 +373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
+  button: {fileID: 4904403356399065592}
+  icon: {fileID: 9085202056175401625}
+  quantityText: {fileID: 574938028685435172}
   inventory: {fileID: 0}
   index: 0
   equipped: 0

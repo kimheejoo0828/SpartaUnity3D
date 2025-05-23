@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     public Action inventory;
     private Rigidbody _rigidbody;
 
+    private float baseSpeed;
+    private Coroutine speedBuffCoroutine;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -34,6 +37,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        baseSpeed = moveSpeed;
     }
 
     private void FixedUpdate()
@@ -127,5 +132,19 @@ public class PlayerController : MonoBehaviour
         bool toggle = Cursor.lockState == CursorLockMode.Locked;
         Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
         canLook = !toggle;
+    }
+
+    public void BoostSpeed(float amount, float duration)
+    {
+        if (speedBuffCoroutine != null)
+            StopCoroutine(speedBuffCoroutine);
+        speedBuffCoroutine = StartCoroutine(SpeedBuffRoutine(amount, duration));
+    }
+
+    IEnumerator SpeedBuffRoutine(float amount, float duration)
+    {
+        moveSpeed = baseSpeed + amount;
+        yield return new WaitForSeconds(duration);
+        moveSpeed = baseSpeed;
     }
 }
